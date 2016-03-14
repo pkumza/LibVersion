@@ -12,7 +12,7 @@ class MongoConnector:
         self.packages = db['brief_packages']
 
     def find_one(self, depth, btc, btn, bh):
-        return self.packages.find({"depth": depth, "b_total_call": btc, "b_total_num": btn, "b_hash": bh})
+        return self.packages.find_one({"depth": depth, "b_total_call": btc, "b_total_num": btn, "b_hash": bh})
 
 
 class TGReader:
