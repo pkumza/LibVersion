@@ -29,8 +29,8 @@ class TGReader:
             depth = len(lib['sp'].split('/'))
             apk_txt = open(lib['lib'].split(';')[1] + '_' + str(depth) + '.txt', 'a')
             lib_info = mc.find_one(depth, lib['btc'], lib['btn'], lib['bh'])
-            print lib_info
-            apk_txt.write(lib_info['apk'].split('/')[-1])
+            # print lib_info
+            apk_txt.write(lib_info['apk'].split('/')[-1] + '\n')
             apk_txt.close()
 
 tgReader = TGReader()
