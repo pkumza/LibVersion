@@ -12,7 +12,7 @@ class MongoConnector:
         self.packages = db['brief_packages']
 
     def find_one(self, depth, btc, btn, bh):
-        return self.packages.find({"depth": depth, "b_total_call": btc, "b_total_num": btn, "b_hash": bh})
+        return self.packages.find_one({"depth": depth, "b_total_call": btc, "b_total_num": btn, "b_hash": bh})
 
 
 class TGReader:
@@ -27,10 +27,10 @@ class TGReader:
                 continue
             # print lib['lib'].split(';')[1]
             depth = len(lib['sp'].split('/'))
-            apk_txt = open(lib['lib'].split(';')[1] + '_' + str(depth) + '.txt', 'a')
+            apk_txt = open('ResultVersion2/' + lib['sp'].replace('/','.') + '.txt', 'a')
             lib_info = mc.find_one(depth, lib['btc'], lib['btn'], lib['bh'])
-            print lib_info
-            apk_txt.write(lib_info['apk'].split('/')[-1])
+            # print lib_info
+            apk_txt.write(lib_info['apk'].split('/')[-1] + '\n')
             apk_txt.close()
 
 tgReader = TGReader()

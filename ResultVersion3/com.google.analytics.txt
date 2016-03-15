@@ -1,0 +1,9 @@
+com.idea.slight.apk
+com.tripomatic.copenhagen.apk
+com.astroved.capricornhoroscope.apk
+com.Knowledge2000.apk
+com.tifo.lazio.apk
+com.udn.news.apk
+com.hearst.wlkytornado.apk
+in.thinktek.IAFFirstStrike.apk
+com.submad.SMWallpaper.apk

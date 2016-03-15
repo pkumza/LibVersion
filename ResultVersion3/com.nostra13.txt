@@ -1,0 +1,2 @@
+com.setup2app.interesnoznat.apk
+com.eidgalleryicool.wallpaper.apk
